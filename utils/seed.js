@@ -16,12 +16,12 @@ connection.once('open', async () => {
     for (thought of userThoughts) {
         const users = usernames[Math.floor(Math.random() * usernames.length)]
 
-        const newThought = await Thought.create({
+        const newThought = await Thought.insertMany({
             ...thought,
             username: users.username
         })
-
-        await User.findOneAndUpdate({ _id: users.id }, { $addToSet: { thoughts: newThought._id }}, {new: true })
+      
+        await User.findOneAndUpdate({ _id: users.userId }, { $addToSet: { thoughts: newThought._id }}, {new: true })
     }
 
     process.exit(0)
