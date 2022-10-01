@@ -20,13 +20,12 @@ module.exports = {
   createThought(req, res) {
     Thought.create(req.body)
       .then((thought) => {
-        console.log(thought);
+        res.json(thought)
         User.findOneAndUpdate(
           { _id: thought.userId },
           { $addToSet: { thoughts: thought._id } },
           { new: true }
         )
-          .then((thought) => res.json(thought))
           .catch((err) => res.status(500).json(err));
       })
       .catch((err) => res.status(500).json(err));
@@ -38,7 +37,8 @@ module.exports = {
       { runValidators: true, new: true }
     )
       .then((thought) => {
-        if (!thouhgt) {
+        console.log(thought)
+        if (!thought) {
           res.status(404).json({ message: "No thought found with that id" });
         } else {
           res.json(thought);

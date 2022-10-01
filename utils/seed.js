@@ -21,7 +21,7 @@ connection.once('open', async () => {
             username: users.username
         })
       
-        await User.findOneAndUpdate({ _id: users.userId }, { $addToSet: { thoughts: newThought._id }}, {new: true })
+        await User.findOneAndUpdate({ _id: users.userId }, { $addToSet: { thoughts: newThought }}, {new: true })
     }
 
     process.exit(0)
