@@ -18,7 +18,7 @@
 
   [Usage](#usage)
 
-  [Technologies](#tech)
+  [Technologies](#technologies)
 
   [Contribution](#contribution)
 
