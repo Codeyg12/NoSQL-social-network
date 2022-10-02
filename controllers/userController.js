@@ -50,7 +50,7 @@ module.exports = {
         if (!user) {
           res.status(404).json({ message: "No user found with that id" });
         } else {
-          Thought.deleteMany({ _id: { $in: user.thoughts } });
+          return Thought.deleteMany({ _id: { $in: user.thoughts } });
         }
       })
       .then(() => res.json({ message: "User and thoughts deleted" }))
@@ -71,7 +71,9 @@ module.exports = {
       { $pull: { friends: req.params.friendId } },
       { new: true }
     )
-      .then((user) => res.json(user))
+      .then((user) => {
+        console.log(user)
+        res.json(user)})
       .catch((err) => ers.status(500).json(err));
   },
 };
