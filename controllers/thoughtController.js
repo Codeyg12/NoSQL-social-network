@@ -9,7 +9,7 @@ module.exports = {
   },
   getSingleThought(req, res) {
     Thought.findOne({ _id: req.params.thoughtId })
-    .select('-__v')
+      .select("-__v")
       .then((thought) => {
         if (!thought) {
           res.status(404).json({ message: "No thought with that id" });
@@ -19,10 +19,11 @@ module.exports = {
       })
       .catch((err) => res.status(500).json(err));
   },
+  // Creates a new thought then updates the "user" so they're connected
   createThought(req, res) {
     Thought.create(req.body)
       .then((thought) => {
-        res.json(thought)
+        res.json(thought);
         User.findOneAndUpdate(
           { _id: req.body.userId },
           { $addToSet: { thoughts: thought._id } },
@@ -57,6 +58,7 @@ module.exports = {
       })
       .catch((err) => res.status(500).json(err));
   },
+  // Reactions
   addReaction(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },

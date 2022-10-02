@@ -1,12 +1,14 @@
 const { User, Thought } = require("../models");
 
 module.exports = {
+  // Gets all users minus the "__v"
   getUsers(req, res) {
     User.find()
       .select("-__v")
       .then((users) => res.json(users))
       .catch((err) => res.status(500).json(err));
   },
+  // Get single user and expands the friends and thoughts arrays
   getSingleUser(req, res) {
     User.findOne({ _id: req.params.userId })
       .select("-__v")
@@ -50,12 +52,14 @@ module.exports = {
         if (!user) {
           res.status(404).json({ message: "No user found with that id" });
         } else {
+          // Deletes the thoughts associated with the user being deleted
           return Thought.deleteMany({ _id: { $in: user.thoughts } });
         }
       })
       .then(() => res.json({ message: "User and thoughts deleted" }))
       .catch((err) => res.status(500).json(err));
   },
+  // Friends list
   addFriend(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.userId },
