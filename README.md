@@ -1,31 +1,30 @@
- <a name="readme-top"></a>
+<a name="readme-top"></a>
 
-  # NoSQL-social-network
+# NoSQL-social-network [<img align="right" src="https://img.shields.io/badge/license-MIT-00beef"></img>](LICENSE)
 
-  ### Description
-  
-  A Social Network API using Express and MongoDB and Mongoose. Users should be able to share thoughts, react to friends thoughts, and create a friend list. 
+### Description
+
+A Social Network API using Express and MongoDB and Mongoose. Users should be able to share thoughts, react to friends thoughts, and create a friend list.
 
   <p align="right"><a href="#readme-top">(Return to top)</a></p>
 
+## Table of Contents
 
-  ## Table of Contents
-  [Description](#description)
-  
-  [Demo](#demo)
+[Description](#description)
 
-  [Installation](#installation)
+[Demo](#demo)
 
-  [Usage](#usage)
+[Installation](#installation)
 
-  [Technologies](#technologies)
+[Usage](#usage)
 
-  [Contribution](#contribution)
+[Technologies](#technologies)
 
-  [Testing](#test)
-  
+[Contribution](#contribution)
 
-  ### Demo
+[Testing](#test)
+
+### Demo
 
 To see a walkthrough video follow the link below.
 
@@ -38,60 +37,66 @@ To see a walkthrough video follow the link below.
   
   ### Installation
 
-  To install follow these steps.
-   1. Clone the repo using either HTTPS 
-   ```
-   https://github.com/Codeyg12/NoSQL-social-network.git
-   ```
+To install follow these steps.
+
+1.  Clone the repo using either HTTPS
+
+```
+https://github.com/Codeyg12/NoSQL-social-network.git
+```
+
 or SSH key
-    
- ```
- git@github.com:Codeyg12/NoSQL-social-network.git
- ```
- 2. install NPM packages
-  ```
-  npm i
-  ```
-  3. Start the server
-  ```
-  npm start
-  ```
+
+```
+git@github.com:Codeyg12/NoSQL-social-network.git
+```
+
+2.  install NPM packages
+
+```
+npm i
+```
+
+3. Start the server
+
+```
+npm start
+```
 
   <p align="right"><a href="#readme-top">(Return to top)</a></p>
 
-  ### Usage
+### Usage
 
-  A social network API that could at a later time be used for a full functioning website.
-
-  <p align="right"><a href="#readme-top">(Return to top)</a></p>
-
-  ### Technologies
-
-  Below are the languages and frameworks/libraries used
-
-  * ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-
-  * ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-
-  * ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+A social network API that could at a later time be used for a full functioning website.
 
   <p align="right"><a href="#readme-top">(Return to top)</a></p>
 
-  ### Contribution
+### Technologies
 
-  Code can always be improved and if you have a suggestion to improve this project then fork the repo and create a pull request.
+Below are the languages and frameworks/libraries used
+
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+- ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+
+- ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
   <p align="right"><a href="#readme-top">(Return to top)</a></p>
 
-  ### Testing
+### Contribution
 
-  npm test
+Code can always be improved and if you have a suggestion to improve this project then fork the repo and create a pull request.
 
   <p align="right"><a href="#readme-top">(Return to top)</a></p>
 
-  #### Links
+### Testing
 
-  To see more of my work check my [Github](https://github.com/Codeyg12). For futher questions you can reach me at codey.gallup@gmail.com.
-  
+npm test
+
   <p align="right"><a href="#readme-top">(Return to top)</a></p>
 
+#### Links
+
+To see more of my work check my [Github](https://github.com/Codeyg12). For futher questions you can reach me at codey.gallup@gmail.com.
+
+  <p align="right"><a href="#readme-top">(Return to top)</a></p>
